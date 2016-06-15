@@ -50,8 +50,8 @@ ln -fs /vagrant/www /var/www/html
 # ==============================================
 
 VHOST=$(cat <<EOF
-NameVirtualHost *:8888
-Listen 8888
+NameVirtualHost *:8080
+Listen 8080
 <VirtualHost *:80>
   DocumentRoot "/var/www/html"
   ServerName localhost
@@ -59,7 +59,7 @@ Listen 8888
       AllowOverride All
     </Directory>
 </VirtualHost>
-<VirtualHost *:8888>
+<VirtualHost *:8080>
   DocumentRoot "/var/www/html"
   ServerName localhost
   <Directory "/var/www/html">
